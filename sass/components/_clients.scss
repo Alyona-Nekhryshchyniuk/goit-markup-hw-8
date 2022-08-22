@@ -1,0 +1,32 @@
+.client-icon-list {
+  display: flex;
+}
+
+.client-icon-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client-link {
+  @extend %flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  transition: border var(--transition-dur-and-func);
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--secondary-color);
+    outline: none;
+  }
+}
+
+.client-link__icon {
+  fill: #afb1b8;
+  transition: fill var(--transition-dur-and-func);
+
+  .client-link:hover &,
+  .client-link:focus & {
+    fill: var(--secondary-color);
+  }
+}

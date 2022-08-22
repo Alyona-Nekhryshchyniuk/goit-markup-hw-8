@@ -1,0 +1,20 @@
+.logo {
+  font-family: Raleway;
+  @include font(700, 26px, 1.2);
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+  display: inline;
+}
+
+.logo--part--black {
+  color: #000;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 9px;
+}
+
+.logo--part--white {
+  color: var(--quaternary-color);
+}

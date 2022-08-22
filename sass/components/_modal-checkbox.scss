@@ -1,0 +1,34 @@
+.modal__checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-right: 13px;
+}
+
+.modal__checkbox-label {
+  position: relative;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 20px;
+  padding-left: 37px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 13px;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    background-color: inherit;
+    border: 1.5px solid #212121;
+  }
+}
+
+.modal__checkbox:checked + .modal__checkbox-label::before {
+  background-color: var(--secondary-color);
+  background-image: url(../images/check-mark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
