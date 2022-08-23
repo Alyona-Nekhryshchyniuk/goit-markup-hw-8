@@ -6,9 +6,10 @@
 .pros-list {
   display: flex;
 
+  flex-direction: column;
+
   &__item {
     text-align: left;
-    width: calc((100% - 90px) / 4);
   }
 
   &__heading {
@@ -25,9 +26,34 @@
 
 .pros-icon__bg {
   @extend %flex;
-  width: 270px;
+  width: 450px;
   height: 120px;
   border-radius: 4px;
   background-color: var(--secondary-background-color);
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .pros-icon__bg {
+    width: 354px;
+  }
+  .pros-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__item {
+      width: calc((100% - 30px) / 2);
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .pros-icon__bg {
+    width: 270px;
+  }
+
+  .pros-list__item {
+    text-align: left;
+    width: calc((100% - 90px) / 4);
+  }
 }

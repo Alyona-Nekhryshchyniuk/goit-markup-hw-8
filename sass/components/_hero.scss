@@ -1,22 +1,72 @@
-// .hero {
-//   text-align: center;
-//   background-color: #c4c4c4;
-//   background-size: cover;
-//   background-image: linear-gradient(
-//       to right,
-//       rgba(47, 48, 58, 0.4),
-//       rgba(47, 48, 58, 0.4)
-//     ),
-//     url(../images/hero.jpg);
-//   padding-top: 200px;
-//   padding-bottom: 200px;
+.hero {
+  text-align: center;
+  background-color: #c4c4c4;
+  background-size: cover;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-tel.jpg);
+  padding-top: 118px;
+  padding-bottom: 118px;
 
-//   // &__heading {
-//   //   @include font(900, 44px, 1.4);
-//   //   letter-spacing: 0.06em;
-//   //   text-transform: uppercase;
-//   //   color: var(--quaternary-color);
-//   //   width: 700px;
-//   //   margin: 0px auto 30px auto;
-//   // }
-// }
+  &__heading {
+    @include font(900, 26px, 1.6);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--quaternary-color);
+    width: 360px;
+    margin: 0px auto 30px auto;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 2/1),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../images/hero-tel@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: url(../images/hero-tablet.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (-o-min-device-pixel-ratio: 2/1),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .hero {
+        background-image: url(../images/hero-tablet@2x.jpg);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: url(../images/hero-desk.jpg);
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (-o-min-device-pixel-ratio: 2/1),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .hero {
+        background-image: url(../images/hero-desk@2x.jpg);
+      }
+    }
+
+    &__heading {
+      font-size: 44px;
+      line-height: 1.4;
+      width: 700px;
+    }
+  }
+}

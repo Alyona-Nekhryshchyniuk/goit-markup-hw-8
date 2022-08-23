@@ -22,3 +22,9 @@
     padding-bottom: 27px;
   }
 }
+
+@media screen and (max-width: 1199px) {
+  .works {
+    display: none;
+  }
+}

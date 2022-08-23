@@ -30,7 +30,7 @@
         <a href="index.html" class="logo"
           >Web<span class="logo--part--black">Studio</span></a
         >
-        <nav class="nav">
+        <nav class="nav header__nav">
           <ul>
             <li class="nav__item">
               <a href="index.html" class="nav__item--current nav__link"
@@ -47,7 +47,7 @@
         <ul class="contact-list">
           <li class="contact-list__item">
             <a href="mailto:info@devstudio.com" class="contact-list__link">
-              <svg class="contact-list__icon" width="16" height="12">
+              <svg class="contact-list__icon contact-list__icon--envelope">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a
@@ -56,9 +56,9 @@
           <li class="contact-list__item">
             <a
               href="tel:+380961111111"
-              class="contact-list__link contact-list__tel-link"
+              class="contact-list__link contact-list__link--tel"
             >
-              <svg class="contact-list__icon" width="10" height="16">
+              <svg class="contact-list__icon contact-list__icon--tel">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -68,7 +68,11 @@
 
         <!-- BURGER-ICON -->
 
-        <button type="button" class="header__burger-button button">
+        <button
+          type="button"
+          class="header__burger-button button"
+          data-menu-open
+        >
           <svg class="header__burger-icon" width="40" height="40">
             <use href="./images/icons.svg#burger-icon"></use>
           </svg>
@@ -76,8 +80,8 @@
 
         <!-- BURGER OVERLAY -->
 
-        <div class="burger-menu-overlay">
-          <button type="button" class="button burger-close-btn">
+        <div class="burger-menu-overlay" data-menu>
+          <button type="button" class="button burger-close-btn" data-menu-close>
             <svg width="30.5" height="30.5" class="close-btn__icon">
               <use href="./images/icons.svg#close-btn__icon"></use>
             </svg>
@@ -87,7 +91,7 @@
             <li class="burger-menu__item">
               <a
                 href="index.html"
-                class="burger-menu__item--current burger-menu__link"
+                class="burger-menu__link burger-menu__link--current"
                 >Studio</a
               >
             </li>
@@ -99,28 +103,28 @@
             </li>
           </ul>
 
-          <ul
-            class="burger-contact-list burger-menu-overlay__burger-contact-list"
-          >
-            <li class="burger-contact-list__item">
+          <ul class="burger-contacts burger-menu-overlay__burger-contacts">
+            <li class="burger-contacts__item">
               <a
                 href="tel:+380961111111"
-                class="burger-contact-list__tel-link burger-contact-list__link"
+                class="burger-contacts__link burger-contacts__link--tel"
               >
                 +38 096 111 11 11</a
               >
             </li>
-            <li class="burger-contact-list__item">
+            <li class="burger-contacts__item">
               <a
                 href="mailto:info@devstudio.com"
-                class="burger-contact-list__mail-link burger-contact-list__link"
+                class="burger-contacts__link burger-contacts__link--mail"
               >
                 info@devstudio.com</a
               >
             </li>
           </ul>
           <ul class="burger-socials">
-            <li class="burger-socials__item palka"><a href="">Instagram</a></li>
+            <li class="burger-socials__item">
+              <a href="">Instagram</a>
+            </li>
             <li class="burger-socials__item"><a href="">Twitter</a></li>
             <li class="burger-socials__item"><a href="">Facebook</a></li>
             <li class="burger-socials__item"><a href="">LinkedIn</a></li>
@@ -132,17 +136,17 @@
       <!-- HERO SECTION -->
 
       <section class="hero">
-        <!-- <h1 class="hero__heading">EFFECTIVE SOLUTIONS FOR YOUR BUSINESS</h1>
+        <h1 class="hero__heading">EFFECTIVE SOLUTIONS FOR YOUR BUSINESS</h1>
         <button type="button" class="button hero__button" data-modal-open>
           Request our service
-        </button> -->
+        </button>
       </section>
 
       <!-- PROS SECTION -->
 
       <section class="pros section">
         <div class="container">
-          <!-- <h2 class="hidden-heading">Our advantages</h2>
+          <h2 class="hidden-heading">Our advantages</h2>
           <ul class="pros-list">
             <li class="pros-list__item">
               <div class="pros-icon__bg">
@@ -165,7 +169,7 @@
               <h3 class="pros-list__heading">PUNCTUALITY</h3>
               <p class="pros-list__description">
                 With us, you can feel safe and secure. An important principle of
-                the company: respect your time and respect the agreed deadlines. 
+                the company: respect your time and respect the agreed deadlines.
               </p>
             </li>
             <li class="pros-list__item">
@@ -192,7 +196,7 @@
                 simplify work processes.
               </p>
             </li>
-          </ul> -->
+          </ul>
         </div>
       </section>
 
@@ -200,7 +204,7 @@
 
       <section class="works section">
         <div class="container">
-          <!-- <h2 class="section__heading">What we do</h2>
+          <h2 class="section__heading">What we do</h2>
           <ul class="works-list">
             <li class="works-list__item">
               <img
@@ -229,7 +233,7 @@
               />
               <p class="works-list__label">DESIGN SOLUTIONS</p>
             </li>
-          </ul> -->
+          </ul>
         </div>
       </section>
 
@@ -237,7 +241,7 @@
 
       <section class="team section">
         <div class="container">
-          <!-- <h2 class="section__heading">Our Team</h2>
+          <h2 class="section__heading">Our Team</h2>
           <ul class="team-list">
             <li class="team-list__item">
               <img
@@ -248,7 +252,9 @@
                 class="worker-photo"
               />
               <div class="team-list__worker">
-                <h3 lang="ru" class="team-list__worker-name">Игорь Демьяненко</h3>
+                <h3 lang="ru" class="team-list__worker-name">
+                  Игорь Демьяненко
+                </h3>
                 <p class="team-list__worker-position">Product Designer</p>
               </div>
               <ul class="socials">
@@ -334,7 +340,9 @@
                 class="worker-photo"
               />
               <div class="team-list__worker">
-                <h3 lang="ru" class="team-list__worker-name">Николай Тарасов</h3>
+                <h3 lang="ru" class="team-list__worker-name">
+                  Николай Тарасов
+                </h3>
                 <p class="team-list__worker-position">Marketing</p>
               </div>
               <ul class="socials">
@@ -411,7 +419,7 @@
                 </li>
               </ul>
             </li>
-          </ul> -->
+          </ul>
         </div>
       </section>
 
@@ -594,6 +602,7 @@
 
       </div>
     </div> -->
-    <script src="./js/modal.js"></script>
+    <script src="./js/burger-menu.js"></script>
+    <!-- <script src="./js/modal.js"></script> -->
   </body>
 </html>
