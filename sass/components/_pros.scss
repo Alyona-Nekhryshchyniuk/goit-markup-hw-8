@@ -1,13 +1,11 @@
 .pros {
   font-size: 14px;
-  padding-bottom: 0px;
+  padding-bottom: 60px;
 }
 
 .pros-list {
   display: flex;
-
-  flex-direction: column;
-
+  flex-wrap: wrap;
   &__item {
     text-align: left;
   }
@@ -38,22 +36,23 @@
     width: 354px;
   }
   .pros-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-
     &__item {
-      width: calc((100% - 30px) / 2);
+      flex-basis: calc((100% - 30px) / 2);
     }
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .pros {
+    padding-bottom: 0px;
+  }
+
   .pros-icon__bg {
     width: 270px;
   }
 
   .pros-list__item {
     text-align: left;
-    width: calc((100% - 90px) / 4);
+    flex-basis: calc((100% - 90px) / 4);
   }
 }

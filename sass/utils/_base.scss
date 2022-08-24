@@ -28,8 +28,31 @@ img {
   display: block;
 }
 
-.pros-list__item:not(:last-child),
-.works-list__item:not(:last-child),
-.team-list__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .pros-list__item {
+    margin-bottom: 30px;
+  }
+
+  .pros-list__item:nth-last-child(1) {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .pros-list__item:nth-last-child(2) {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pros-list__item:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .pros-list__item:not(:last-child),
+  .works-list__item:not(:last-child),
+  .team-list__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
