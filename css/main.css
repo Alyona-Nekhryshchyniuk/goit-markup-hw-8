@@ -41,27 +41,41 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-  .pros-list__item {
-    margin-bottom: 30px;
-  }
-  .pros-list__item:nth-last-child(1) {
-    margin-bottom: 0px;
+  .client-icon-list__item:nth-child(2n+1) {
+    margin-right: 30px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .pros-list__item:nth-last-child(2) {
+  .pros-list__item:nth-last-child(2),
+.team-list__item:nth-last-child(2) {
     margin-bottom: 0px;
   }
-}
-@media screen and (min-width: 768px) {
-  .pros-list__item:nth-child(2n+1) {
+  .pros-list__item:nth-child(2n+1),
+.team-list__item:nth-child(2n+1) {
     margin-right: 30px;
+  }
+  .client-icon-list__item {
+    margin-right: 30px;
+  }
+  .client-icon-list__item:nth-child(3n+3) {
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .pros-list__item,
+.team-list__item {
+    margin-bottom: 30px;
+  }
+  .pros-list__item:nth-last-child(1),
+.team-list__item:nth-last-child(1) {
+    margin-bottom: 0px;
   }
 }
 @media screen and (min-width: 1200px) {
   .pros-list__item:not(:last-child),
 .works-list__item:not(:last-child),
-.team-list__item:not(:last-child) {
+.team-list__item:not(:last-child),
+.client-icon-list__item:not(:last-child) {
     margin-right: 30px;
   }
 }
@@ -346,7 +360,7 @@ img {
     background-image: url(../images/hero-tablet.jpg);
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-o-min-device-pixel-ratio: 2/1), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-width: 768px) and (-o-min-device-pixel-ratio: 2/1) and (min-width: 768px), screen and (min-width: 768px) and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-width: 768px) and (min-resolution: 2dppx) and (min-width: 768px) {
   .hero .hero {
     background-image: url(../images/hero-tablet@2x.jpg);
   }
@@ -358,7 +372,7 @@ img {
     padding-bottom: 200px;
   }
 }
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-o-min-device-pixel-ratio: 2/1), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-width: 1200px) and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero .hero {
     background-image: url(../images/hero-desk@2x.jpg);
   }
@@ -467,7 +481,7 @@ img {
 }
 .team-list__worker {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
 .team-list__worker-name {
   font-weight: 500;
@@ -489,13 +503,18 @@ img {
 
 @media screen and (min-width: 768px) {
   .team-list__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-list__item {
+    flex-basis: calc((100% - 90px) / 4);
     padding-bottom: 30px;
   }
 }
 .socials {
   display: flex;
   justify-content: center;
-  margin-top: 16px;
 }
 
 .social-link {
@@ -523,14 +542,11 @@ img {
 
 .client-icon-list {
   display: flex;
-}
-
-.client-icon-list__item:not(:last-child) {
-  margin-right: 30px;
+  flex-wrap: wrap;
 }
 
 .client-link {
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -549,6 +565,16 @@ img {
   fill: var(--secondary-color);
 }
 
+@media screen and (min-width: 768px) {
+  .client-link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client-link {
+    width: 170px;
+  }
+}
 .contacts-and-socials-container {
   display: flex;
   align-items: baseline;

@@ -1,14 +1,12 @@
 .client-icon-list {
   display: flex;
-}
-
-.client-icon-list__item:not(:last-child) {
-  margin-right: 30px;
+  flex-wrap: wrap;
 }
 
 .client-link {
   @extend %flex;
-  width: 170px;
+  width: 210px;
+  // width: calc((100% - 30px) / 2);
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -28,5 +26,17 @@
   .client-link:hover &,
   .client-link:focus & {
     fill: var(--secondary-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .client-link {
+    width: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client-link {
+    width: 170px;
   }
 }

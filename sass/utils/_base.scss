@@ -28,31 +28,56 @@ img {
   display: block;
 }
 
+// PHONE
 @media screen and (max-width: 767px) {
-  .pros-list__item {
-    margin-bottom: 30px;
-  }
-
-  .pros-list__item:nth-last-child(1) {
-    margin-bottom: 0px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .pros-list__item:nth-last-child(2) {
-    margin-bottom: 0px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .pros-list__item:nth-child(2n + 1) {
+  .client-icon-list__item:nth-child(2n + 1) {
     margin-right: 30px;
   }
 }
 
+// TABLET
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .pros-list__item:nth-last-child(2),
+  .team-list__item:nth-last-child(2) {
+    margin-bottom: 0px;
+  }
+
+  .pros-list__item:nth-child(2n + 1),
+  .team-list__item:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+
+  .client-icon-list__item {
+    margin-right: 30px;
+
+    &:nth-child(3n + 3) {
+      margin-right: 0px;
+    }
+  }
+}
+
+// DESKTOP AND TABLET
+
+@media screen and (max-width: 1199px) {
+  .pros-list__item,
+  .team-list__item {
+    margin-bottom: 30px;
+  }
+
+  .pros-list__item:nth-last-child(1),
+  .team-list__item:nth-last-child(1) {
+    margin-bottom: 0px;
+  }
+}
+
+// DESKTOP
+
 @media screen and (min-width: 1200px) {
   .pros-list__item:not(:last-child),
   .works-list__item:not(:last-child),
-  .team-list__item:not(:last-child) {
+  .team-list__item:not(:last-child),
+  .client-icon-list__item:not(:last-child) {
     margin-right: 30px;
   }
 }

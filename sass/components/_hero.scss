@@ -35,11 +35,11 @@
   .hero {
     background-image: url(../images/hero-tablet.jpg);
 
-    @media (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
-      (-o-min-device-pixel-ratio: 2/1),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    @media (min-device-pixel-ratio: 2) and (min-width: 768px),
+      (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+      (-o-min-device-pixel-ratio: 2/1) and (min-width: 768px),
+      (min-resolution: 192dpi) and (min-width: 768px),
+      (min-resolution: 2dppx) and (min-width: 768px) {
       .hero {
         background-image: url(../images/hero-tablet@2x.jpg);
       }
@@ -53,11 +53,11 @@
     padding-top: 200px;
     padding-bottom: 200px;
 
-    @media (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
-      (-o-min-device-pixel-ratio: 2/1),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    @media (min-device-pixel-ratio: 2) and (min-width: 1200px),
+      (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
+      (-o-min-device-pixel-ratio: 2/1) and (min-width: 1200px),
+      (min-resolution: 192dpi) and (min-width: 1200px),
+      (min-resolution: 2dppx) and (min-width: 1200px) {
       .hero {
         background-image: url(../images/hero-desk@2x.jpg);
       }
