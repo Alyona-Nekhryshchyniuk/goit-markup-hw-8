@@ -1,21 +1,21 @@
-// .footer {
-//   background-color: var(--primary-background-color);
-//   padding-top: 63px;
-//   padding-bottom: 51px;
-// }
+.footer {
+  background-color: var(--primary-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 // .footer-flex-container {
 //   display: flex;
 //   justify-content: space-between;
 // }
-.contacts-and-socials-container {
-  display: flex;
-  align-items: baseline;
-}
+// .contacts-and-socials-container {
+//   display: flex;
+//   align-items: baseline;
+// }
 
 .address {
   font-size: 14px;
   line-height: 1.7;
-  text-align: left;
+  text-align: center;
   font-style: normal;
 }
 
@@ -44,5 +44,13 @@
   &:focus {
     outline: 0px;
     color: var(--secondary-color);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding-bottom: 51px;
+  }
+  .address {
+    text-align: left;
   }
 }

@@ -16,11 +16,26 @@
   color: #000;
 }
 
-// .footer__logo {
-//   display: block;
-//   margin-bottom: 9px;
-// }
-
 .logo--part--white {
   color: var(--quaternary-color);
+}
+@media screen and (max-width: 1199px) {
+  .footer__logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 13px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__logo {
+    display: block;
+    margin-bottom: 9px;
+  }
 }
