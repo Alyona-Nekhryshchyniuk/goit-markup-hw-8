@@ -102,7 +102,6 @@ img {
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--secondary-color);
-  display: inline;
 }
 
 @media screen and (min-width: 1200px) {
@@ -118,13 +117,11 @@ img {
   color: var(--quaternary-color);
 }
 
-@media screen and (max-width: 1199px) {
-  .footer__logo {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 13px;
-  }
+.footer__logo {
+  display: block;
+  margin-bottom: 13px;
 }
+
 @media screen and (min-width: 768px) {
   .footer__logo {
     margin-bottom: 12px;
@@ -132,8 +129,8 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .footer__logo {
-    display: block;
     margin-bottom: 9px;
+    align-self: flex-start;
   }
 }
 .container {
@@ -427,7 +424,7 @@ img {
 }
 
 .pros-icon__bg {
-  width: 450px;
+  max-width: 450px;
   height: 120px;
   border-radius: 4px;
   background-color: var(--secondary-background-color);
@@ -599,6 +596,18 @@ img {
   padding-bottom: 60px;
 }
 
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .address {
   font-size: 14px;
   line-height: 1.7;
@@ -629,12 +638,23 @@ img {
   color: var(--secondary-color);
 }
 
+@media screen and (min-width: 768px) {
+  .contacts-and-socials-container {
+    display: flex;
+    align-items: baseline;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer {
     padding-bottom: 51px;
   }
   .address {
     text-align: left;
+  }
+  .footer-flex-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
   }
 }
 .social-link {
@@ -661,16 +681,26 @@ img {
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .footer__footer-socials-container {
+    margin-left: 165px;
+  }
+}
 @media screen and (min-width: 1200px) {
-  .footer-socials-container {
+  .footer__footer-socials-container {
     margin-left: 70px;
   }
   .social-call {
     text-align: left;
   }
 }
+.sign-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .sign-form__label {
-  display: block;
   color: var(--quaternary-color);
   font-weight: 700;
   font-size: 14px;
@@ -690,8 +720,6 @@ img {
 }
 
 .sign-form__input {
-  display: inline-block;
-  width: 450px;
   height: 50px;
   margin-top: 20px;
   line-height: 1.25;
@@ -712,22 +740,29 @@ img {
 }
 
 .sign-form__label-and-input {
-  display: inline-block;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 1200px) {
   .sign-form__input {
-    width: 358px;
+    width: 450px;
   }
-  .signUp-button {
-    margin-left: -4px;
+}
+@media screen and (min-width: 1200px) {
+  .sign-form__input {
+    width: 358px;
   }
   .sign-form__label {
     text-align: left;
   }
   .sign-form__label-and-input {
     width: 358px;
+    margin-right: 12px;
+  }
+  .sign-form {
+    flex-direction: row;
+    align-items: flex-end;
   }
 }
 .filter-list {

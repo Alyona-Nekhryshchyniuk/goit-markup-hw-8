@@ -1,6 +1,3 @@
-// .footer-socials-container {
-//   margin-left: 70px;
-
 .social-link {
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color var(--transition-dur-and-func);
@@ -22,10 +19,13 @@
 }
 
 @media screen and (min-width: 768px) {
+  .footer__footer-socials-container {
+    margin-left: 165px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-  .footer-socials-container {
+  .footer__footer-socials-container {
     margin-left: 70px;
   }
   .social-call {
