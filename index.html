@@ -72,15 +72,16 @@
           type="button"
           class="header__burger-button button"
           data-menu-open
+          aria-controls="menu-container"
         >
-          <svg class="header__burger-icon" width="40" height="40">
+          <svg aria-label="mobile menu switcher" class="header__burger-icon" width="40" height="40">
             <use href="./images/icons.svg#burger-icon"></use>
           </svg>
         </button>
 
         <!-- BURGER OVERLAY -->
 
-        <div class="burger-menu-overlay" data-menu>
+        <div class="burger-menu-overlay" id="menu-container" data-menu>
           <button type="button" class="button burger-close-btn" data-menu-close>
             <svg width="30.5" height="30.5" class="close-btn__icon">
               <use href="./images/icons.svg#close-btn__icon"></use>
@@ -671,7 +672,7 @@
             <a href="index.html" class="logo footer__logo"
               >Web<span class="logo--part--white">Studio</span></a
             >
-            <address class="address">
+            <address class="address footer__address">
               <ul class="address-list">
                 <li class="address-list__item">
                   <a
@@ -704,28 +705,28 @@
             <ul class="socials">
               <li class="socials__item">
                 <a href="" class="social-link">
-                  <svg class="social-link__icon" width="20" height="20">
+                  <svg class="social-link__footer-icon" width="20" height="20">
                     <use href="./images/icons.svg#insta"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
                 <a href="" class="social-link">
-                  <svg class="social-link__icon" width="20" height="20">
+                  <svg class="social-link__footer-icon" width="20" height="20">
                     <use href="./images/icons.svg#twitter"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
                 <a href="" class="social-link">
-                  <svg class="social-link__icon" width="20" height="20">
+                  <svg class="social-link__footer-icon" width="20" height="20">
                     <use href="./images/icons.svg#facebook"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
                 <a href="" class="social-link">
-                  <svg class="social-link__icon" width="20" height="20">
+                  <svg class="social-link__footer-icon" width="20" height="20">
                     <use href="./images/icons.svg#linkedin"></use>
                   </svg>
                 </a>
@@ -771,7 +772,7 @@
 
     <!-- MODAL WINDOW -->
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal-window">
         <button type="button" class="button close-btn" data-modal-close>
           <svg width="18" height="18" class="close-btn__icon">
@@ -798,8 +799,8 @@
 
 
       </div>
-    </div> -->
+    </div>
     <script src="./js/burger-menu.js"></script>
-    <!-- <script src="./js/modal.js"></script> -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>

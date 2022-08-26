@@ -7,10 +7,10 @@
 
 .modal__checkbox-label {
   position: relative;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.16;
   margin-top: 20px;
-  padding-left: 37px;
+  padding-left: 25px;
 
   &::before {
     content: "";
@@ -24,6 +24,11 @@
     border: 1.5px solid #212121;
   }
 }
+@media screen and (max-width: 1199px) {
+  .modal__checkbox-label::before {
+    left: 0px;
+  }
+}
 
 .modal__checkbox:checked + .modal__checkbox-label::before {
   background-color: var(--secondary-color);
@@ -31,4 +36,11 @@
   background-repeat: no-repeat;
   background-position: center;
   border: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__checkbox-label {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }

@@ -391,8 +391,8 @@ img {
     background-image: url(../images/hero-tablet.jpg);
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-width: 768px) and (-o-min-device-pixel-ratio: 2/1) and (min-width: 768px), screen and (min-width: 768px) and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-width: 768px) and (min-resolution: 2dppx) and (min-width: 768px) {
-  .hero .hero {
+@media (min-device-pixel-ratio: 2) and (min-width: 768px), (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 768px), (min-resolution: 192dpi) and (min-width: 768px), (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
     background-image: url(../images/hero-tablet@2x.jpg);
   }
 }
@@ -402,17 +402,15 @@ img {
     padding-top: 200px;
     padding-bottom: 200px;
   }
-}
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-width: 1200px) and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 2dppx) and (min-width: 1200px) {
-  .hero .hero {
-    background-image: url(../images/hero-desk@2x.jpg);
-  }
-}
-@media screen and (min-width: 1200px) {
   .hero__heading {
     font-size: 44px;
     line-height: 1.4;
     width: 700px;
+  }
+}
+@media (min-device-pixel-ratio: 2) and (min-width: 1200px), (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 1200px), (min-resolution: 192dpi) and (min-width: 1200px), (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: url(../images/hero-desk@2x.jpg);
   }
 }
 .pros {
@@ -433,6 +431,7 @@ img {
   line-height: 1.1;
   text-transform: uppercase;
   margin-bottom: 10px;
+  text-align: center;
 }
 .pros-list__description {
   line-height: 1.71;
@@ -492,10 +491,11 @@ img {
   padding-bottom: 27px;
 }
 
-.worker-photo {
-  width: 93.75vw;
+@media screen and (max-width: 767px) {
+  .worker-photo {
+    width: 93.75vw;
+  }
 }
-
 @media screen and (max-width: 1199px) {
   .works {
     display: none;
@@ -658,6 +658,16 @@ img {
   color: var(--secondary-color);
 }
 
+@media screen and (max-width: 767px) {
+  .footer__address {
+    margin-bottom: 48px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .contacts-and-socials-container {
+    margin-bottom: 50px;
+  }
+}
 @media screen and (min-width: 768px) {
   .contacts-and-socials-container {
     display: flex;
@@ -681,14 +691,12 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color var(--transition-dur-and-func);
 }
-
-.social-link__icon {
-  fill: var(--quaternary-color);
-}
-
-.social-link:hover,
-.social-link:focus {
+.social-link:hover, .social-link:focus {
   background-color: var(--secondary-color);
+}
+.social-link__footer-icon {
+  fill: var(--quaternary-color);
+  display: block;
 }
 
 .social-call {
@@ -720,6 +728,12 @@ img {
   align-items: center;
 }
 
+.sign-form__label-and-input {
+  display: flex;
+  flex-direction: column;
+  width: 93.75vw;
+}
+
 .sign-form__label {
   color: var(--quaternary-color);
   font-weight: 700;
@@ -728,10 +742,6 @@ img {
   text-transform: uppercase;
   margin-top: 13px;
   text-align: center;
-}
-
-.signUp-button {
-  padding: 8px 25px 8px 40px;
 }
 
 .signUp-icon {
@@ -750,6 +760,7 @@ img {
   background-color: inherit;
   padding-left: 16px;
   padding-right: 0px;
+  width: 93.75vw;
 }
 .sign-form__input::placeholder {
   line-height: 1.25;
@@ -759,31 +770,35 @@ img {
   padding-left: 16px;
 }
 
-.sign-form__label-and-input {
-  display: flex;
-  flex-direction: column;
-  width: 93.75vw;
+.signUp-button {
+  padding: 8px 25px 8px 40px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1199px) {
+  .sign-form__label-and-input {
+    margin-bottom: 20px;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
   .sign-form__input {
     width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .sign-form__input {
-    width: 358px;
-  }
-  .sign-form__label {
-    text-align: left;
+  .sign-form {
+    flex-direction: row;
+    align-items: flex-end;
   }
   .sign-form__label-and-input {
     width: 358px;
     margin-right: 12px;
   }
-  .sign-form {
-    flex-direction: row;
-    align-items: flex-end;
+  .sign-form__label {
+    text-align: left;
+  }
+  .sign-form__input {
+    width: 358px;
   }
 }
 .filter-list {
@@ -915,14 +930,25 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  width: 93.75vw;
+  height: 609px;
   background-color: var(--quaternary-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px 40px 0px 40px;
 }
 
+@media screen and (min-width: 768px) {
+  .modal-window {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-window {
+    width: 528px;
+    height: 581px;
+  }
+}
 .close-btn {
   position: absolute;
   top: 0;
@@ -971,7 +997,6 @@ img {
 .modal__input {
   width: 100%;
   height: 40px;
-  padding-left: 42px;
 }
 .modal__textarea {
   display: block;
@@ -984,6 +1009,11 @@ img {
   opacity: 0.5;
 }
 
+@media screen and (min-width: 1200px) {
+  .modal__call {
+    margin-bottom: 12px;
+  }
+}
 textarea::placeholder,
 .modal__input {
   font-size: 14px;
@@ -1032,10 +1062,10 @@ textarea::placeholder,
 
 .modal__checkbox-label {
   position: relative;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.16;
   margin-top: 20px;
-  padding-left: 37px;
+  padding-left: 25px;
 }
 .modal__checkbox-label::before {
   content: "";
@@ -1049,6 +1079,11 @@ textarea::placeholder,
   border: 1.5px solid #212121;
 }
 
+@media screen and (max-width: 1199px) {
+  .modal__checkbox-label::before {
+    left: 0px;
+  }
+}
 .modal__checkbox:checked + .modal__checkbox-label::before {
   background-color: var(--secondary-color);
   background-image: url(../images/check-mark.svg);
@@ -1057,6 +1092,12 @@ textarea::placeholder,
   border: none;
 }
 
+@media screen and (min-width: 1200px) {
+  .modal__checkbox-label {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
 .header__burger-button, .burger-close-btn {
   background-color: transparent;
   border: none;
@@ -1074,7 +1115,7 @@ textarea::placeholder,
   z-index: 100;
   width: 100%;
   height: 100%;
-  background-color: beige;
+  background-color: var(--quaternary-color);
   padding: 48px 40px;
   letter-spacing: 0.02em;
   visibility: hidden;
