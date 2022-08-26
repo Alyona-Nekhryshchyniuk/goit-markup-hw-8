@@ -5,8 +5,7 @@
 
 .client-link {
   @extend %flex;
-  width: 210px;
-  // width: calc((100% - 30px) / 2);
+  width: 43.75vw;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
