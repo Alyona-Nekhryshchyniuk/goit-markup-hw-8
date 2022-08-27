@@ -10,7 +10,7 @@
   align-items: center;
 }
 
-.footer-flex-container {
+.footer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,13 +58,13 @@
 }
 
 @media screen and (max-width: 1199px) {
-  .contacts-and-socials-container {
+  .contacts-and-socials {
     margin-bottom: 50px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .contacts-and-socials-container {
+  .contacts-and-socials {
     display: flex;
     align-items: baseline;
   }
@@ -77,7 +77,7 @@
   .address {
     text-align: left;
   }
-  .footer-flex-container {
+  .footer-container {
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;

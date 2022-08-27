@@ -13,7 +13,7 @@
   }
 }
 
-.social-call {
+.footer-socials__social-call {
   @include font(700, 14px, 1.1);
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -22,16 +22,16 @@
 }
 
 @media screen and (min-width: 768px) {
-  .footer__footer-socials-container {
+  .footer__footer-socials {
     margin-left: 165px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .footer__footer-socials-container {
+  .footer__footer-socials {
     margin-left: 70px;
   }
-  .social-call {
+  .footer-socials__social-call {
     text-align: left;
   }
 }

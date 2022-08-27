@@ -1,25 +1,25 @@
 .filter-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
 
-  .button {
-    @include font(500, 16px, 1.6);
-    letter-spacing: 0.03em;
-    text-align: center;
-    border-radius: 4px;
-    background-color: #f5f4fa;
-    border: 0px;
-    padding: 6px 25px;
-    transition: color var(--transition-dur-and-func),
-      background-color var(--transition-dur-and-func),
-      box-shadow var(--transition-dur-and-func);
+.filter-btn {
+  @include font(500, 16px, 1.6);
+  letter-spacing: 0.03em;
+  background-color: #f5f4fa;
+  padding: 6px 26px;
+  color: var(--primary-color);
+  transition: color var(--transition-dur-and-func),
+    background-color var(--transition-dur-and-func);
+
+  &:hover,
+  &:focus {
+    @extend .filter-list__btn--active;
   }
 }
 
-.filter-list .button:hover,
-.filter-list .button:focus,
-.filter-list .filter-list__item--active {
+.filter-list__btn--active {
   background-color: var(--secondary-color);
   color: var(--quaternary-color);
   outline: 0px;
@@ -27,11 +27,40 @@
     0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
+@media screen and (max-width: 480px) {
+  .filter-list__item:first-child {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter-list {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter-list {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
 .filter-list__item:not(:last-child) {
   margin-right: 8px;
 }
 
-.filter-list__item:nth-child(3) .button {
+.filter-btn:nth-child(3) {
   padding-right: 53px;
   padding-left: 53px;
+}
+
+@media screen and (max-width: 395px) {
+  .filter-btn {
+    padding: 8px 16px;
+  }
+  .filter-list__item:nth-child(3) .button {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }

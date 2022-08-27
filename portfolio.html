@@ -139,17 +139,17 @@
         <div class="container">
           <ul class="filter-list">
             <li class="filter-list__item">
-              <button type="button" class="button filter-list__item--active">all</button>
+              <button type="button" class="button filter-btn filter-list__btn--active">all</button>
             </li>
             <li class="filter-list__item">
-              <button type="button" class="button">Web-sites</button>
+              <button type="button" class="button filter-btn">Web-sites</button>
             </li>
             <li class="filter-list__item">
-              <button type="button" class="button">Apps</button>
+              <button type="button" class="button filter-btn">Apps</button>
             </li>
-            <li class="filter-list__item"><button type="button" class="button">Design</button></li>
+            <li class="filter-list__item"><button type="button" class="button filter-btn">Design</button></li>
             <li class="filter-list__item">
-              <button type="button" class="button">Marketing</button>
+              <button type="button" class="button filter-btn">Marketing</button>
             </li>
           </ul>
 
@@ -160,12 +160,21 @@
             <li class="portfolio-list__card">
               <a href="">
                 <div class="img-and-overlay-container">
-                  <img
-                    src="./images-potfolio/img1.jpg"
-                    width="370px"
-                    height="293px"
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="./images-potfolio/img-desk(1).webp 1x, ./images-potfolio/img-desk@2x(1).webp 2x" type="image/webp">
+                    <source media="(min-width: 768px)" srcset="./images-potfolio/img-tablet(1).webp 1x, ./images-potfolio/img-tablet@2x(1).webp 2x" type="image/webp">
+                    <source media="(max-width: 480px)" srcset="./images-potfolio/img-tel(1).webp 1x, ./images-potfolio/img-tel@2x(1).webp 2x" type="image/webp">
+
+                    <source media="(min-width: 1200px)" srcset="./images-potfolio/img-desk(1).jpeg 1x, ./images-potfolio/img-desk@2x(1).jpeg 2x">
+                    <source media="(min-width: 768px)" srcset="./images-potfolio/img-tablet(1).jpeg 1x, ./images-potfolio/img-tablet@2x(1).jpeg 2x">
+                    <source media="(max-width: 480px)" srcset="./images-potfolio/img-tel(1).jpeg 1x, ./images-potfolio/img-tel@2x(1).jpeg 2x">
+                   <img
+                    src="./images-potfolio/img-desk@2x(1).jpeg"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px"
+                    
                     alt="Web-site on Laptop"
-                  />
+                    class="portfolio-img"
+                  /></picture>
                   <p class="portfolio-list__card-overlay">
                     Technoduck is a state-of-the-art coronavirus distribution
                     platform. Companies use this platform for digital espionage
@@ -182,12 +191,21 @@
             <li class="portfolio-list__card">
               <a href="">
                 <div class="img-and-overlay-container">
-                  <img
-                    src="./images-potfolio/img2.jpg"
-                    width="370px"
-                    height="293px"
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="./images-potfolio/img-desk(2).webp 1x, ./images-potfolio/img-desk@2x(2).webp 2x" type="image/webp">
+                    <source media="(min-width: 768px)" srcset="./images-potfolio/img-tablet(2).webp 1x, ./images-potfolio/img-tablet@2x(2).webp 2x" type="image/webp">
+                    <source media="(max-width: 480px)" srcset="./images-potfolio/img-tel(2).webp 1x, ./images-potfolio/img-tel@2x(2).webp 2x" type="image/webp">
+
+                    <source media="(min-width: 1200px)" srcset="./images-potfolio/img-desk(2).jpeg 1x, ./images-potfolio/img-desk@2x(2).jpeg 2x">
+                    <source media="(min-width: 768px)" srcset="./images-potfolio/img-tablet(2).jpeg 1x, ./images-potfolio/img-tablet@2x(2).jpeg 2x">
+                    <source media="(max-width: 480px)" srcset="./images-potfolio/img-tel(2).jpeg 1x, ./images-potfolio/img-tel@2x(2).jpeg 2x">
+                   <img
+                    src="./images-potfolio/img-desk@2x(2).jpeg"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px"
+                    
                     alt="Basketball Poster"
-                  />
+                    class="portfolio-img"
+                  /></picture>
                   <p class="portfolio-list__card-overlay">
                     Technoduck is a state-of-the-art coronavirus distribution
                     platform. Companies use this platform for digital espionage
@@ -205,12 +223,21 @@
             <li class="portfolio-list__card">
               <a href="">
                 <div class="img-and-overlay-container">
-                  <img
-                    src="./images-potfolio/img3.jpg"
-                    width="370px"
-                    height="293px"
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="./images-potfolio/img-desk(3).webp 1x, ./images-potfolio/img-desk@2x(3).webp 2x" type="image/webp">
+                    <source media="(min-width: 768px)" srcset="./images-potfolio/img-tablet(3).webp 1x, ./images-potfolio/img-tablet@2x(3).webp 2x" type="image/webp">
+                    <source media="(max-width: 480px)" srcset="./images-potfolio/img-tel(3).webp 1x, ./images-potfolio/img-tel@2x(3).webp 2x" type="image/webp">
+
+                    <source media="(min-width: 1200px)" srcset="./images-potfolio/img-desk(3).jpeg 1x, ./images-potfolio/img-desk@2x(3).jpeg 2x">
+                    <source media="(min-width: 768px)" srcset="./images-potfolio/img-tablet(3).jpeg 1x, ./images-potfolio/img-tablet@2x(3).jpeg 2x">
+                    <source media="(max-width: 480px)" srcset="./images-potfolio/img-tel(3).jpeg 1x, ./images-potfolio/img-tel@2x(3).jpeg 2x">
+                   <img
+                    src="./images-potfolio/img-desk@2x(3).jpeg"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px"
+                    
                     alt="Logo of Seafood Restaurant"
-                  />
+                    class="portfolio-img"
+                  /></picture>
                   <p class="portfolio-list__card-overlay">
                     Technoduck is a state-of-the-art coronavirus distribution
                     platform. Companies use this platform for digital espionage
@@ -226,12 +253,21 @@
             <li class="portfolio-list__card">
               <a href="">
                 <div class="img-and-overlay-container">
-                  <img
-                    src="./images-potfolio/img4.jpg"
-                    width="370px"
-                    height="293px"
-                    alt="Рeadphones"
-                  />
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="./images-potfolio/img-desk(4).webp 1x, ./images-potfolio/img-desk@2x(4).webp 2x" type="image/webp">
+                    <source media="(min-width: 768px)" srcset="./images-potfolio/img-tablet(4).webp 1x, ./images-potfolio/img-tablet@2x(4).webp 2x" type="image/webp">
+                    <source media="(max-width: 480px)" srcset="./images-potfolio/img-tel(4).webp 1x, ./images-potfolio/img-tel@2x(4).webp 2x" type="image/webp">
+
+                    <source media="(min-width: 1200px)" srcset="./images-potfolio/img-desk(4).jpeg 1x, ./images-potfolio/img-desk@2x(4).jpeg 2x">
+                    <source media="(min-width: 768px)" srcset="./images-potfolio/img-tablet(4).jpeg 1x, ./images-potfolio/img-tablet@2x(4).jpeg 2x">
+                    <source media="(max-width: 480px)" srcset="./images-potfolio/img-tel(4).jpeg 1x, ./images-potfolio/img-tel@2x(4).jpeg 2x">
+                   <img
+                    src="./images-potfolio/img-desk@2x(4).jpeg"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px"
+                    
+                    alt="Рeadphonest"
+                    class="portfolio-img"
+                  /></picture>
                   <p class="portfolio-list__card-overlay">
                     Technoduck is a state-of-the-art coronavirus distribution
                     platform. Companies use this platform for digital espionage
@@ -247,12 +283,21 @@
             <li class="portfolio-list__card">
               <a href="">
                 <div class="img-and-overlay-container">
-                  <img
-                    src="./images-potfolio/img5.jpg"
-                    width="370px"
-                    height="293px"
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="./images-potfolio/img-desk(5).webp 1x, ./images-potfolio/img-desk@2x(5).webp 2x" type="image/webp">
+                    <source media="(min-width: 768px)" srcset="./images-potfolio/img-tablet(5).webp 1x, ./images-potfolio/img-tablet@2x(5).webp 2x" type="image/webp">
+                    <source media="(max-width: 480px)" srcset="./images-potfolio/img-tel(5).webp 1x, ./images-potfolio/img-tel@2x(5).webp 2x" type="image/webp">
+
+                    <source media="(min-width: 1200px)" srcset="./images-potfolio/img-desk(5).jpeg 1x, ./images-potfolio/img-desk@2x(5).jpeg 2x">
+                    <source media="(min-width: 768px)" srcset="./images-potfolio/img-tablet(5).jpeg 1x, ./images-potfolio/img-tablet@2x(5).jpeg 2x">
+                    <source media="(max-width: 480px)" srcset="./images-potfolio/img-tel(5).jpeg 1x, ./images-potfolio/img-tel@2x(5).jpeg 2x">
+                   <img
+                    src="./images-potfolio/img-desk@2x(5).jpeg"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px"
+                    
                     alt="Boxes"
-                  />
+                    class="portfolio-img"
+                  /></picture>
                   <p class="portfolio-list__card-overlay">
                     Technoduck is a state-of-the-art coronavirus distribution
                     platform. Companies use this platform for digital espionage
@@ -268,12 +313,21 @@
             <li class="portfolio-list__card">
               <a href="">
                 <div class="img-and-overlay-container">
-                  <img
-                    src="./images-potfolio/img6.jpg"
-                    width="370px"
-                    height="293px"
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="./images-potfolio/img-desk(6).webp 1x, ./images-potfolio/img-desk@2x(6).webp 2x" type="image/webp">
+                    <source media="(min-width: 768px)" srcset="./images-potfolio/img-tablet(6).webp 1x, ./images-potfolio/img-tablet@2x(6).webp 2x" type="image/webp">
+                    <source media="(max-width: 480px)" srcset="./images-potfolio/img-tel(6).webp 1x, ./images-potfolio/img-tel@2x(6).webp 2x" type="image/webp">
+
+                    <source media="(min-width: 1200px)" srcset="./images-potfolio/img-desk(6).jpeg 1x, ./images-potfolio/img-desk@2x(6).jpeg 2x">
+                    <source media="(min-width: 768px)" srcset="./images-potfolio/img-tablet(6).jpeg 1x, ./images-potfolio/img-tablet@2x(6).jpeg 2x">
+                    <source media="(max-width: 480px)" srcset="./images-potfolio/img-tel(6).jpeg 1x, ./images-potfolio/img-tel@2x(6).jpeg 2x">
+                   <img
+                    src="./images-potfolio/img-desk@2x(6).jpeg"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px"
+                    
                     alt="Web-site on Desktop"
-                  />
+                    class="portfolio-img"
+                  /></picture>
                   <p class="portfolio-list__card-overlay">
                     Technoduck is a state-of-the-art coronavirus distribution
                     platform. Companies use this platform for digital espionage
@@ -291,12 +345,21 @@
             <li class="portfolio-list__card">
               <a href="">
                 <div class="img-and-overlay-container">
-                  <img
-                    src="./images-potfolio/img7.jpg"
-                    width="370px"
-                    height="293px"
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="./images-potfolio/img-desk(7).webp 1x, ./images-potfolio/img-desk@2x(7).webp 2x" type="image/webp">
+                    <source media="(min-width: 768px)" srcset="./images-potfolio/img-tablet(7).webp 1x, ./images-potfolio/img-tablet@2x(7).webp 2x" type="image/webp">
+                    <source media="(max-width: 480px)" srcset="./images-potfolio/img-tel(7).webp 1x, ./images-potfolio/img-tel@2x(7).webp 2x" type="image/webp">
+
+                    <source media="(min-width: 1200px)" srcset="./images-potfolio/img-desk(7).jpeg 1x, ./images-potfolio/img-desk@2x(7).jpeg 2x">
+                    <source media="(min-width: 768px)" srcset="./images-potfolio/img-tablet(7).jpeg 1x, ./images-potfolio/img-tablet@2x(7).jpeg 2x">
+                    <source media="(max-width: 480px)" srcset="./images-potfolio/img-tel(7).jpeg 1x, ./images-potfolio/img-tel@2x(7).jpeg 2x">
+                   <img
+                    src="./images-potfolio/img-desk@2x(7).jpeg"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px"
+                    
                     alt="Glossy Magazine"
-                  />
+                    class="portfolio-img"
+                  /></picture>
                   <p class="portfolio-list__card-overlay">
                     Technoduck is a state-of-the-art coronavirus distribution
                     platform. Companies use this platform for digital espionage
@@ -312,12 +375,21 @@
             <li class="portfolio-list__card">
               <a href="">
                 <div class="img-and-overlay-container">
-                  <img
-                    src="./images-potfolio/img8.jpg"
-                    width="370px"
-                    height="293px"
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="./images-potfolio/img-desk(8).webp 1x, ./images-potfolio/img-desk@2x(8).webp 2x" type="image/webp">
+                    <source media="(min-width: 768px)" srcset="./images-potfolio/img-tablet(8).webp 1x, ./images-potfolio/img-tablet@2x(8).webp 2x" type="image/webp">
+                    <source media="(max-width: 480px)" srcset="./images-potfolio/img-tel(8).webp 1x, ./images-potfolio/img-tel@2x(8).webp 2x" type="image/webp">
+
+                    <source media="(min-width: 1200px)" srcset="./images-potfolio/img-desk(8).jpeg 1x, ./images-potfolio/img-desk@2x(8).jpeg 2x">
+                    <source media="(min-width: 768px)" srcset="./images-potfolio/img-tablet(8).jpeg 1x, ./images-potfolio/img-tablet@2x(8).jpeg 2x">
+                    <source media="(max-width: 480px)" srcset="./images-potfolio/img-tel(8).jpeg 1x, ./images-potfolio/img-tel@2x(8).jpeg 2x">
+                   <img
+                    src="./images-potfolio/img-desk@2x(8).jpeg"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px"
+                    
                     alt="Label Design"
-                  />
+                    class="portfolio-img"
+                  /></picture>
                   <p class="portfolio-list__card-overlay">
                     Technoduck is a state-of-the-art coronavirus distribution
                     platform. Companies use this platform for digital espionage
@@ -333,12 +405,21 @@
             <li class="portfolio-list__card">
               <a href="">
                 <div class="img-and-overlay-container">
-                  <img
-                    src="./images-potfolio/img9.jpg"
-                    width="370px"
-                    height="293px"
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="./images-potfolio/img-desk(9).webp 1x, ./images-potfolio/img-desk@2x(9).webp 2x" type="image/webp">
+                    <source media="(min-width: 768px)" srcset="./images-potfolio/img-tablet(9).webp 1x, ./images-potfolio/img-tablet@2x(9).webp 2x" type="image/webp">
+                    <source media="(max-width: 480px)" srcset="./images-potfolio/img-tel(9).webp 1x, ./images-potfolio/img-tel@2x(9).webp 2x" type="image/webp">
+
+                    <source media="(min-width: 1200px)" srcset="./images-potfolio/img-desk(9).jpeg 1x, ./images-potfolio/img-desk@2x(9).jpeg 2x">
+                    <source media="(min-width: 768px)" srcset="./images-potfolio/img-tablet(9).jpeg 1x, ./images-potfolio/img-tablet@2x(9).jpeg 2x">
+                    <source media="(max-width: 480px)" srcset="./images-potfolio/img-tel(9).jpeg 1x, ./images-potfolio/img-tel@2x(9).jpeg 2x">
+                   <img
+                    src="./images-potfolio/img-desk@2x(9).jpeg"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px"
+                    
                     alt="Web-site Page of Grawing Business"
-                  />
+                    class="portfolio-img"
+                  /></picture>
                   <p class="portfolio-list__card-overlay">
                     Technoduck is a state-of-the-art coronavirus distribution
                     platform. Companies use this platform for digital espionage
@@ -359,8 +440,8 @@
     <!-- FOOTER -->
 
     <footer class="footer">
-      <div class="container footer-flex-container">
-        <div class="contacts-and-socials-container">
+      <div class="container footer-container">
+        <div class="contacts-and-socials">
           <div class="contacts">
             <a href="index.html" class="logo footer__logo"
               >Web<span class="logo--part--white">Studio</span></a
@@ -393,8 +474,8 @@
 
           <!-- FOOTER SOCIALS -->
 
-          <div class="footer-socials-container footer__footer-socials-container">
-            <p class="social-call">Find us on</p>
+          <div class="footer-socials footer__footer-socials">
+            <p class="footer-socials__social-call">Find us on</p>
             <ul class="socials">
               <li class="socials__item">
                 <a href="" class="social-link">
@@ -462,5 +543,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/burger-menu.js"></script>
   </body>
 </html>

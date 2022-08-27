@@ -666,8 +666,8 @@
     <!-- FOOTER -->
 
     <footer class="footer">
-      <div class="container footer-flex-container">
-        <div class="contacts-and-socials-container">
+      <div class="container footer-container">
+        <div class="contacts-and-socials footer-container__contacts-and-socials">
           <div class="contacts">
             <a href="index.html" class="logo footer__logo"
               >Web<span class="logo--part--white">Studio</span></a
@@ -700,8 +700,8 @@
 
           <!-- FOOTER SOCIALS -->
 
-          <div class="footer-socials-container footer__footer-socials-container">
-            <p class="social-call">Find us on</p>
+          <div class="footer-socials footer__footer-socials">
+            <p class="footer-socials__social-call">Find us on</p>
             <ul class="socials">
               <li class="socials__item">
                 <a href="" class="social-link">
@@ -774,7 +774,7 @@
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal-window">
-        <button type="button" class="button close-btn" data-modal-close>
+        <button type="button" class="button close-btn modal-window__close-btn" data-modal-close>
           <svg width="18" height="18" class="close-btn__icon">
             <use href="./images/icons.svg#close-btn__icon"></use>
           </svg>
@@ -793,11 +793,8 @@
            </label>
           <label><span class="modal__label">Comments</span> <textarea name="user-comments" placeholder="Enter the text" class="modal__textarea"></textarea></label>
 <input type="checkbox" id="checkbox" name="privacy-policy-check" class="modal__checkbox"><label for="checkbox" class="modal__label modal__checkbox-label">I agree with the newsletter and accept the Terms and Conditions</label>
-          <button type="submit" class="button modal-button">Send</button>
+          <button type="submit" class="button submit-btn modal__submit-btn">Send</button>
         </form>
-
-
-
       </div>
     </div>
     <script src="./js/burger-menu.js"></script>
