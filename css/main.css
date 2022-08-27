@@ -1152,7 +1152,6 @@ textarea::placeholder,
   width: 100%;
   height: 100%;
   background-color: var(--quaternary-color);
-  padding: 48px 40px;
   letter-spacing: 0.02em;
   visibility: hidden;
   opacity: 0;
@@ -1174,6 +1173,14 @@ textarea::placeholder,
   height: 40px;
 }
 
+.burger-container {
+  padding: 48px 40px;
+}
+
+.burger-container__burger-socials {
+  margin-bottom: 48px;
+}
+
 .burger-menu__link {
   font-weight: 500;
   font-size: 40px;
@@ -1193,7 +1200,7 @@ textarea::placeholder,
 }
 
 .burger-menu-overlay__burger-contacts {
-  margin-top: 302px;
+  margin-top: 37.93vh;
   margin-bottom: 64px;
 }
 
