@@ -13,6 +13,10 @@
     }
   }
 
+  .portfolio-img {
+    width: 100%;
+  }
+
   &__card-description {
     padding: 20px 24px 20px 24px;
     border-right: 1px solid #eee;
@@ -54,6 +58,12 @@
   transform: translateY(0%);
 }
 
+@media screen and (max-width: 767px) {
+  .portfolio-list__card-overlay {
+    display: none;
+  }
+}
+
 .img-and-overlay-container {
   position: relative;
   overflow: hidden;
@@ -64,10 +74,6 @@
 @media screen and (max-width: 767px) {
   .portfolio-list__card:last-child {
     margin-bottom: 0;
-  }
-
-  .portfolio-img {
-    width: 93.75vw;
   }
 }
 

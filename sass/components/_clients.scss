@@ -1,41 +1,43 @@
 .client-icon-list {
   display: flex;
   flex-wrap: wrap;
+
+  &__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .client-icon-list__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client-icon-list__item {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .client-link {
   @extend %flex;
-  width: 43.7vw;
-  height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   transition: border var(--transition-dur-and-func);
-
+  height: 92px;
   &:hover,
   &:focus {
     border: 1px solid var(--secondary-color);
     outline: none;
   }
-}
 
-.client-link__icon {
-  fill: #afb1b8;
-  transition: fill var(--transition-dur-and-func);
+  &__icon {
+    fill: #afb1b8;
+    transition: fill var(--transition-dur-and-func);
 
-  .client-link:hover &,
-  .client-link:focus & {
-    fill: var(--secondary-color);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .client-link {
-    width: 226px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .client-link {
-    width: 170px;
+    .client-link:hover &,
+    .client-link:focus & {
+      fill: var(--secondary-color);
+    }
   }
 }
